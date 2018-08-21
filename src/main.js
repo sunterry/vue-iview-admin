@@ -8,6 +8,9 @@ import locale from 'iview/dist/locale/zh-CN'
 Vue.use(iView, {locale})
 Vue.config.productionTip = false
 
+/* eslint-disable */
+process.env.NODE_ENV === 'development' ? require('@/mock') : ''
+
 new Vue({
   router,
   store,
